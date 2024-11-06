@@ -1,0 +1,19 @@
+.boton-accion {
+  margin-right: 40px; /* Ajusta este valor según la separación que necesites */
+}
+.boton-formulario {
+  margin-right: 400px;
+
+
+
+}
+
+.stock-container {
+  background-color: #2196F3; /* Color de fondo similar al de Gestión de Productos */
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 20px;
+  color: #fdfcfc;
+  text-align: center;
+  font-size: 30px;
+}
