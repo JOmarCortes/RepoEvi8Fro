@@ -1,11 +1,20 @@
 .boton-accion {
-  margin-right: 40px; /* Ajusta este valor según la separación que necesites */
+  margin-right: 40px; /* Mantén el margen entre los botones de acción de la tabla */
 }
-.boton-formulario {
-  margin-right: 400px;
 
+.boton-formulario,
+.btn {
+  min-width: 120px; /* Tamaño mínimo uniforme para los botones del formulario */
+  text-align: center; /* Centrar el texto dentro de los botones */
+}
 
-
+/* Estilos para el contenedor de los botones */
+.card-action .input-field {
+  display: flex; /* Activar Flexbox */
+  justify-content: center; /* Alinear los botones horizontalmente al centro */
+  align-items: center; /* Centrar verticalmente */
+  gap: 10px; /* Separación uniforme entre los botones */
+  flex-wrap: wrap; /* Permitir que los botones pasen a otra línea si no caben */
 }
 
 .stock-container {

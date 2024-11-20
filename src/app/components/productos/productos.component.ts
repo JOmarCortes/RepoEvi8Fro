@@ -38,12 +38,22 @@ export class ProductosComponent implements OnInit {
   }
 
   agregarProducto(form?: NgForm) {
-    this.productoService.postProducto(form?.value).subscribe(res => {
-      this.resetForm(form);
-      M.toast({ html: 'Guardado satisfactoriamente' });
-      this.obtenerProductos(); // Actualizar la lista después de agregar
-    });
+    this.productoService.postProducto(form?.value).subscribe(
+      (res) => {
+        this.resetForm(form);
+        M.toast({ html: 'Guardado satisfactoriamente' });
+        this.obtenerProductos(); // Actualizar la lista después de agregar
+      },
+      (error) => {
+        if (error.status === 400 && error.error.message) {
+          M.toast({ html: error.error.message }); // Mostrar el mensaje de error del backend
+        } else {
+          M.toast({ html: 'Error al guardar el producto' });
+        }
+      }
+    );
   }
+
 
   mostrarProducto(producto: Producto) {
     this.productoService.selectedProducto = { ...producto };
